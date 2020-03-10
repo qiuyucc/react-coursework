@@ -3,8 +3,16 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 2nd part component
 >>>>>>> 2nd part component
+>>>>>>> 2nd commit
+=======
+>>>>>>> 2nd part component
+>>>>>>> 2nd part component
+>>>>>>> 6667e9a77af2a94e30338f7cf394dd16ffe7f4d5
 **Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
 
 When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
@@ -55,6 +63,12 @@ Now that you're more familiar with your Bitbucket repository, go ahead and add a
 <<<<<<< HEAD
 Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+=======
+=======
+>>>>>>> 6667e9a77af2a94e30338f7cf394dd16ffe7f4d5
 Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
 =======
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -128,3 +142,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 >>>>>>> Initialize project using Create React App
 >>>>>>> 2nd part component
 >>>>>>> 2nd part component
+<<<<<<< HEAD
+>>>>>>> 2nd commit
+=======
+>>>>>>> 6667e9a77af2a94e30338f7cf394dd16ffe7f4d5
