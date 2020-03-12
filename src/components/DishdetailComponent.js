@@ -4,6 +4,10 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from
 
 
 class DishdetailComponent extends Component{
+
+    componentDidMount(){
+        console.log('DishDetail Component componenetDidMount invoked');
+    }
     RenderDetail(selectedDish){
         return (
             <div className="col-12 col-md-5 m-1">
