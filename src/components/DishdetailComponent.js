@@ -26,7 +26,7 @@ function RenderDetail({ dish }) {
     );
 }
 
-function RenderComment({ dishId, comments, commenting }) {
+function RenderComment({ comments, addComment, dishId  }) {
     if (comments != null) {
         let comms = comments.map((comm, i) => {
             let date = new Intl.DateTimeFormat('en-US', {
@@ -45,7 +45,7 @@ function RenderComment({ dishId, comments, commenting }) {
             <div>
                 <h4>Comments</h4>
                 <div>{comms}</div>
-                <CommentForm dishId={dishId} commenting={commenting} />
+                <CommentForm dishId={dishId} addComment={addComment} />
             </div>
 
         );
@@ -76,7 +76,7 @@ const DishDetails = (props) => {
                         <RenderDetail dish={props.dish} />
                     </div>
                     <div className="col-12 col-md-5 m-1">
-                        <RenderComment dishId={props.dish.dishId} comments={props.comments} commenting={props.commenting} />
+                        <RenderComment  comments={props.comments} addComment={props.addComment} dishId={props.dish.id} />
                     </div>
                 </div>
             </div>
@@ -110,21 +110,24 @@ class CommentForm extends Component {
     }
 
     handleSubmit(values) {
-        console.log("Current State is: " + JSON.stringify(values));
-        alert("Current State is: " + JSON.stringify(values));
-        
+       this.toggleModal();
+        this.props.addComment(this.props.dishId, values.rating,values.author,values.comment);
+            console.log(this.props.dishId);
+            console.log(values.rating);
+            console.log(values.author);
+            console.log(values.comment);
     }
 
     render() {
         return (
-            <React.Fragment>
+            <div>
             <Button className="bg-white text-dark" onClick={this.toggleModal}><i className="fa fa-pencil fa-lg"></i>{' '}Submit Comment</Button>
             <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                 <ModalHeader toggle={this.toggleModal}>
                     Submit Comment
                 </ModalHeader>
                 <ModalBody>
-                    <LocalForm onSubmit={(value)=>this.handleSubmit(value)}>
+                    <LocalForm onSubmit={(values)=>this.handleSubmit(values)}>
                     <Row className="form-group">
                                 <Label htmlFor="rating" md={4}>Rating</Label>
                                 <Col md={12}>
@@ -188,7 +191,7 @@ class CommentForm extends Component {
                     </LocalForm>
                 </ModalBody>
             </Modal>
-            </React.Fragment>
+            </div>
         );
     }
 
