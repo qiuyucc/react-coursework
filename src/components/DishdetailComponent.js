@@ -5,7 +5,8 @@ import {
 } from "reactstrap"
 import { Link } from 'react-router-dom';
 import { LocalForm, Errors, Control } from 'react-redux-form';
-
+import {Loading} from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 
 const required = (val) => val && val.length;
@@ -16,7 +17,7 @@ function RenderDetail({ dish }) {
     return (
         <div>
             <Card>
-                <CardImg width="100%" src={dish.image} alt={dish.name} />
+                <CardImg width="100%" src={baseUrl+dish.image} alt={dish.name} />
                 <CardBody>
                     <CardTitle>{dish.name}</CardTitle>
                     <CardText>{dish.description}</CardText>
@@ -58,7 +59,25 @@ function RenderComment({ comments, addComment, dishId  }) {
 }
 
 const DishDetails = (props) => {
-    if (props.dish != null) {
+    if(props.isLoading){
+        return(
+            <div classnName ="container">
+                <div classnName ="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    else if(props.errMess){
+        return(
+            <div classnName ="container">
+                <div classnName ="row">
+                    <h4>{props.errMess}</h4>
+                </div>
+            </div>
+        );
+    }
+    else if (props.dish != null) {
         return (
             <div className="container">
                 <div className="row">
