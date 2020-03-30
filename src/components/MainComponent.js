@@ -9,6 +9,7 @@ import Contact from './ContactComponent';
 import { connect } from 'react-redux';
 import { BrowserRouter, Switch, Route, Redirect,withRouter } from 'react-router-dom';
 import { postComment, fetchDishes, fetchComments, fetchPromos } from '../redux/ActionCreator';
+import { TransitionGroup, CSSTransition} from 'react-transition-group';
 
 import  {actions} from 'react-redux-form';
 
@@ -69,7 +70,9 @@ class Main extends Component {
       return (
       <div>
         <Header />
-        <Switch>
+        <TransitionGroup>
+          <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
+          <Switch>
               <Route path='/home' component={HomePage} />
               <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
               <Route path='/menu/:dishId' component ={DishWithId}/>
@@ -77,6 +80,8 @@ class Main extends Component {
               <Route exact path='/aboutus' component ={()=> <About leaders={this.props.leaders}/>} />
               <Redirect to="/home" />
           </Switch>
+          </CSSTransition> 
+        </TransitionGroup>
         <Footer />
       </div>
     );
