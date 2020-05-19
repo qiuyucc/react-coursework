@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2nd part component
->>>>>>> 2nd part component
->>>>>>> 2nd commit
-=======
->>>>>>> 2nd part component
->>>>>>> 2nd part component
->>>>>>> 6667e9a77af2a94e30338f7cf394dd16ffe7f4d5
+
 **Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
 
 When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
@@ -139,10 +125,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
->>>>>>> Initialize project using Create React App
->>>>>>> 2nd part component
->>>>>>> 2nd part component
-<<<<<<< HEAD
->>>>>>> 2nd commit
-=======
->>>>>>> 6667e9a77af2a94e30338f7cf394dd16ffe7f4d5
